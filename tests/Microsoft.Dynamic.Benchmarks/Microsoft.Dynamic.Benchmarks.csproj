@@ -6,6 +6,7 @@
 
     <!-- Add .NET Framework 4.6.2 on Windows -->
     <TargetFrameworks Condition="'$(OS)' == 'Windows_NT'">$(TargetFrameworks);net462</TargetFrameworks>
+    <TargetFrameworks Condition="'$(IncludeNet11)' == 'true'">$(TargetFrameworks);net11.0</TargetFrameworks>
 
     <!-- Output to local bin directory to avoid conflicts with other projects -->
     <OutputPath>bin\$(Configuration)\</OutputPath>
